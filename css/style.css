@@ -1,0 +1,145 @@
+body {
+  overflow: hidden;
+}
+
+.row {
+  height: 550px;
+  width: 900px;
+  margin-top: 35px
+}
+
+.score-1 {
+  height: inherit;
+  width: inherit;
+  position: relative;
+  top: 20%;
+  left: 25%;
+}
+
+.score-2 {
+  height: inherit;
+  width: inherit;
+  position: relative;
+  top: 20%;
+  left: 25%;
+}
+
+.current-score-1 {
+  background-color: red;
+  height: inherit;
+  width: 110px;
+  position: relative;
+  bottom: -24%;
+  left: 40%;
+}
+
+.current-score-2 {
+  background-color: red;
+  height: inherit;
+  width: 110px;
+  position: relative;
+  top: 14%;
+  left: 40%;
+}
+
+.gamer-on {
+  background-color: rgb(242, 242, 200);
+}
+
+.gamer-off {
+  background-color: rgb(250, 250, 248);
+}
+
+.score-font-size {
+  font-size: 90px;
+  font-family: 'Work Sans', sans-serif;
+  color: rgb(248, 175, 175);
+}
+
+.svg-color {
+  color: rgb(248, 175, 175); 
+}
+
+.players {
+  font-size: 35px;
+}
+
+.new-game {
+  height: inherit;
+  width: 150px;
+  position: relative;
+  left: 84%;
+  top: -35%;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.roll-dice {
+  height: inherit;
+  width: 140px;
+  position: relative;
+  left: 84%;
+  top: 5%;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.hold {
+  height: inherit;
+  width: 100px;
+  position: relative;
+  left: 90%;
+  top: 8%;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.new-game:hover {
+  background-color: rgb(218, 200, 83);
+  color: white;
+  border-radius: 10%;
+}
+
+.roll-dice:hover {
+  background-color: rgb(218, 200, 83);
+  color: white;
+  border-radius: 10%;
+} 
+
+.hold:hover {
+  background-color: rgb(218, 200, 83);
+  color: white;
+  border-radius: 10%;
+}
+
+.box-dice {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  right: 15%;
+  top: -4%;
+  box-shadow: 4px 7px rgb(242, 242, 200);
+  background-color: rgb(242, 242, 200);
+  border-radius: 10%;
+}
+
+.dice {
+  position: relative;
+  height: inherit;
+  width: inherit;
+  top: 4px;
+  left: 3px;
+}
+
+.current {
+  font-size: 12px;
+}
+
+.red-dot-on {
+  color: rgb(211, 28, 28);
+  opacity: 1;
+}
+
+.red-dot-off {
+  opacity: 0;
+}
