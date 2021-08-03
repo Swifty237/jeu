@@ -111,10 +111,10 @@ newGame.addEventListener("click", () => {
 // Génération d'une valeur aléatoire entre 1 et 6 grace a un évènement clic
 
 rollDice.addEventListener("click", () => {
-  let number = Math.floor(Math.random()*6)
+  let number = Math.floor(Math.random()*6 + 1)
+
   
-  if (number == 0 || number == 1) {
-    number = 1
+  if (number == 1) {
     changeDice(number)
     scoring.innerHTML = 0
     count ++
