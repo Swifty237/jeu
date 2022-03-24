@@ -146,7 +146,7 @@ rollDiceMd.addEventListener("click", () => {
 
   
   if (number == 1) {
-    changeDice(number)
+    changeDiceMd(number)
     scoring.innerHTML = 0
     count ++
     setPlayer()
@@ -154,7 +154,7 @@ rollDiceMd.addEventListener("click", () => {
   }
   
   else {
-    changeDice(number)
+    changeDiceMd(number)
     setCurrentScore(number)
   }
 })
