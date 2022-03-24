@@ -1,7 +1,11 @@
 const newGame = document.querySelector(".new-game")
+const newGameMd = document.querySelector(".new-game-md")
 const rollDice = document.querySelector(".roll-dice")
+const rollDiceMd = document.querySelector(".roll-dice-md")
 const hold = document.querySelector(".hold")
+const holdMd = document.querySelector(".hold-md")
 const dice = document.querySelector(".dice")
+const diceMd = document.querySelector(".dice-md")
 const scoring1 = document.querySelector(".scoring-1")
 const scoring2 = document.querySelector(".scoring-2")
 const scorePlayer1 = document.querySelector(".total-1")
@@ -100,10 +104,19 @@ let changeDice = (number) => {
   dice.setAttribute("src", "dado_" + number + ".svg")
 }
 
+let changeDiceMd = (number) => {
+  diceMd.removeAttribute("src")
+  diceMd.setAttribute("src", "dado_" + number + ".svg")
+}
+
 
 // Lancement d'une nouvelle partie
 
 newGame.addEventListener("click", () => {
+  document.location.reload()
+})
+
+newGameMd.addEventListener("click", () => {
   document.location.reload()
 })
 
@@ -128,10 +141,42 @@ rollDice.addEventListener("click", () => {
   }
 })
 
+rollDiceMd.addEventListener("click", () => {
+  let number = Math.floor(Math.random()*6 + 1)
+
+  
+  if (number == 1) {
+    changeDice(number)
+    scoring.innerHTML = 0
+    count ++
+    setPlayer()
+    setTheme()
+  }
+  
+  else {
+    changeDice(number)
+    setCurrentScore(number)
+  }
+})
+
 
 // Ajout du score courant au global avec changement de joueur
 
 hold.addEventListener("click", () => {
+  let total = parseInt(scoring.innerHTML, 10)
+  setTotalScore(total)
+  if (scoring.innerHTML == 0) {
+    alert("Votre score courant est de 0, Vous devez lancer le dé avant d'enregistrer")
+  }
+  else {
+    scoring.innerHTML = 0
+    count ++
+    setPlayer()
+    setTheme()
+  }
+})
+
+holdMd.addEventListener("click", () => {
   let total = parseInt(scoring.innerHTML, 10)
   setTotalScore(total)
   if (scoring.innerHTML == 0) {
